@@ -1,7 +1,10 @@
 import customtkinter as ctk
 import tkinter.messagebox as messagebox
 import threading
-import winsound
+try:
+    import winsound
+except ImportError:
+    winsound = None
 import ui_chat
 import ui_data_grid
 import ui_modals

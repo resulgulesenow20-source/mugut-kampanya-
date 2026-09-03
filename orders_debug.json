@@ -1,0 +1,47 @@
+{
+  "Emirler": {
+    "timestamp": "2026-06-23 07:09:30.910000+00:00",
+    "id": "SwqRExDGotUn5xoflkJV",
+    "summary": "1x \u00d6grenci men\u00fc 1, 1x Dana k\u00f6fteli burger ",
+    "items": [
+      {
+        "price": 175,
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/mugt-gelsin.firebasestorage.app/o/menu_items%2Fmugut_6006%2F1777424223676_IMG_6282.jpeg?alt=media&token=45c69004-b47f-4e99-b567-70a4f6bc4343",
+        "quantity": 1,
+        "note": null,
+        "name": "\u00d6grenci men\u00fc 1"
+      },
+      {
+        "price": 200,
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/mugt-gelsin.firebasestorage.app/o/menu_items%2Fmugut_6006%2F1777424180842_IMG_6279.jpeg?alt=media&token=a9ea72b9-216a-4ece-a632-0e485236b318",
+        "quantity": 1,
+        "note": null,
+        "name": "Dana k\u00f6fteli burger "
+      }
+    ],
+    "firestore_id": "SwqRExDGotUn5xoflkJV",
+    "customerUid": "o2CMYsR7ZtdJVHE8ogYqXdm7nO13",
+    "customerName": "resul Gulesenov",
+    "couponCode": null,
+    "status": "onay bekliyor",
+    "paymentMethod": "kapida_nakit",
+    "totalPrice": 375,
+    "shop_name": "Burger king",
+    "originalPrice": 375,
+    "deliveryAddress": "233 kwartal, Balkanabat",
+    "discountAmount": 0,
+    "longitude": 54.35859730286261,
+    "total": "375.00",
+    "time": "10:09",
+    "shop_id": "mugut_6006",
+    "customer": "resul Gulesenov",
+    "payment": "Gap\u0131da Nagyt",
+    "contact": "+905528595745",
+    "latitude": 39.52385163589249,
+    "createdAt": "2026-06-23 07:09:30.910000+00:00",
+    "note": "",
+    "customerPhone": "+905528595745",
+    "platform": "MUGUT GELS\u0130N"
+  },
+  "orders": null
+}

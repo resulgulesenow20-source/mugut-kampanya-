@@ -1,0 +1,54 @@
+[
+  {
+    "description": "",
+    "shopId": "",
+    "is_app_banner": true,
+    "isActive": true,
+    "shop_id": "",
+    "image": "https://storage.googleapis.com/mugt-gelsin.firebasestorage.app/AppConfig/f20d2a1a-353f-4769-854d-5b5b0578b503.jpg",
+    "imageUrl": "https://storage.googleapis.com/mugt-gelsin.firebasestorage.app/AppConfig/f20d2a1a-353f-4769-854d-5b5b0578b503.jpg",
+    "createdAt": "now",
+    "mediaType": "image",
+    "title": "Genel Afiş Reklamı",
+    "id": "TaW1OJ4kNIhM0z0GF8rB"
+  },
+  {
+    "description": "",
+    "shopId": "",
+    "is_app_banner": true,
+    "isActive": true,
+    "shop_id": "",
+    "image": "https://storage.googleapis.com/mugt-gelsin.firebasestorage.app/AppConfig/fd78f37d-e4fc-48a8-a035-f416ca2a2a58.png",
+    "imageUrl": "https://storage.googleapis.com/mugt-gelsin.firebasestorage.app/AppConfig/fd78f37d-e4fc-48a8-a035-f416ca2a2a58.png",
+    "createdAt": "now",
+    "mediaType": "image",
+    "title": "Genel Afiş Reklamı",
+    "id": "e5z0Ie0h2khVWdLgEX4S"
+  },
+  {
+    "description": "",
+    "shopId": "",
+    "is_app_banner": true,
+    "isActive": true,
+    "shop_id": "",
+    "image": "https://storage.googleapis.com/mugt-gelsin.firebasestorage.app/AppConfig/8680a633-c2c8-4a59-8467-2a8d53fb134c.png",
+    "imageUrl": "https://storage.googleapis.com/mugt-gelsin.firebasestorage.app/AppConfig/8680a633-c2c8-4a59-8467-2a8d53fb134c.png",
+    "createdAt": "now",
+    "mediaType": "image",
+    "title": "Genel Afiş Reklamı",
+    "id": "jxxhKYyX6lvReJTAhBWj"
+  },
+  {
+    "description": "",
+    "shopId": "mugut_1569",
+    "is_app_banner": true,
+    "isActive": true,
+    "shop_id": "mugut_1569",
+    "image": "https://storage.googleapis.com/mugt-gelsin.firebasestorage.app/AppConfig/bf7e40f4-d1e4-43ab-b645-a07be549b010.png",
+    "imageUrl": "https://storage.googleapis.com/mugt-gelsin.firebasestorage.app/AppConfig/bf7e40f4-d1e4-43ab-b645-a07be549b010.png",
+    "createdAt": "now",
+    "mediaType": "image",
+    "title": "kampanyada",
+    "id": "qtZ9HDSm01L3hoWx0Exv"
+  }
+]

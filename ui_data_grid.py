@@ -164,13 +164,13 @@ def _render_splash_upload_section(app):
     except ImportError:
         pass
 
-    frame = ctk.CTkFrame(app.content_scroll, fg_color="#EFF6FF", corner_radius=12, border_color="#3B82F6", border_width=2)
+    frame = ctk.CTkFrame(app.content_scroll, fg_color="white", corner_radius=16, border_color="#E2E8F0", border_width=2)
     frame.pack(fill="x", pady=(0, 20), padx=5)
     
-    lbl_title = ctk.CTkLabel(frame, text="Müşteri Uygulaması Giriş Animasyonu (Splash Screen)", font=ctk.CTkFont(size=16, weight="bold"), text_color="#1E3A8A")
+    lbl_title = ctk.CTkLabel(frame, text="Müşteri Uygulaması Giriş Animasyonu", font=ctk.CTkFont(size=18, weight="bold"), text_color="#1E293B")
     lbl_title.pack(pady=(15, 5))
     
-    lbl_info = ctk.CTkLabel(frame, text="Masaüstünüzden seçeceğiniz .json, .lottie, .mp4 veya resim dosyası uygulamanın yeni açılış ekranı olacaktır.", font=ctk.CTkFont(size=13), text_color="#3B82F6")
+    lbl_info = ctk.CTkLabel(frame, text="Masaüstünüzden seçeceğiniz medya dosyası uygulamanın yeni açılış ekranı olacaktır.", font=ctk.CTkFont(size=14), text_color="#64748B")
     lbl_info.pack(pady=(0, 15))
     
     def on_upload():
@@ -204,11 +204,11 @@ def _render_splash_upload_section(app):
             except Exception as e:
                 messagebox.showerror("Hata", f"Yükleme sırasında hata oluştu:\n{e}")
             finally:
-                btn_upload.configure(text="Yeni Video / Resim Yükle", state="normal")
+                btn_upload.configure(text="✨ Medya Yükle", state="normal")
                 
         threading.Thread(target=process_upload, daemon=True).start()
         
-    btn_upload = ctk.CTkButton(frame, text="Yeni Medya (Lottie/Video/Resim) Yükle", font=ctk.CTkFont(size=14, weight="bold"), fg_color="#2563EB", hover_color="#1D4ED8", text_color="white", command=on_upload)
+    btn_upload = ctk.CTkButton(frame, text="✨ Medya Yükle", font=ctk.CTkFont(size=15, weight="bold"), fg_color="#6366F1", hover_color="#4F46E5", text_color="white", corner_radius=12, height=44, border_width=2, border_color="#4338CA", command=on_upload)
     btn_upload.pack(pady=(0, 15))
 
 def _render_app_banners_upload_section(app):
@@ -222,13 +222,13 @@ def _render_app_banners_upload_section(app):
     except ImportError:
         pass
 
-    frame = ctk.CTkFrame(app.content_scroll, fg_color="#F3E8FF", corner_radius=12, border_color="#9333EA", border_width=2)
+    frame = ctk.CTkFrame(app.content_scroll, fg_color="white", corner_radius=16, border_color="#E2E8F0", border_width=2)
     frame.pack(fill="x", pady=(0, 20), padx=5)
     
-    lbl_title = ctk.CTkLabel(frame, text="Mobil Uygulama Üst Afiş Reklamı Ekle", font=ctk.CTkFont(size=16, weight="bold"), text_color="#581C87")
+    lbl_title = ctk.CTkLabel(frame, text="Mobil Üst Afiş Reklamı Ekle", font=ctk.CTkFont(size=18, weight="bold"), text_color="#1E293B")
     lbl_title.pack(pady=(15, 5))
     
-    lbl_info = ctk.CTkLabel(frame, text="Uygulamanın en üstünde kayan reklamlara yeni bir afiş ekleyin.", font=ctk.CTkFont(size=13), text_color="#7E22CE")
+    lbl_info = ctk.CTkLabel(frame, text="Uygulamanın en üstünde kayan reklamlara yeni bir afiş ekleyin.", font=ctk.CTkFont(size=14), text_color="#64748B")
     lbl_info.pack(pady=(0, 15))
     
     try:
@@ -294,11 +294,11 @@ def _render_app_banners_upload_section(app):
             except Exception as e:
                 messagebox.showerror("Hata", f"Yükleme sırasında hata oluştu:\n{e}")
                 try:
-                    btn_upload.configure(text="+ Yeni Afiş Yükle", state="normal")
+                    btn_upload.configure(text="✨ Afiş Yükle", state="normal")
                 except:
                     pass
                 
         threading.Thread(target=process_upload, daemon=True).start()
         
-    btn_upload = ctk.CTkButton(frame, text="+ Yeni Afiş Yükle", font=ctk.CTkFont(size=14, weight="bold"), fg_color="#9333EA", hover_color="#7E22CE", text_color="white", command=on_upload)
+    btn_upload = ctk.CTkButton(frame, text="✨ Afiş Yükle", font=ctk.CTkFont(size=15, weight="bold"), fg_color="#6366F1", hover_color="#4F46E5", text_color="white", corner_radius=12, height=44, border_width=2, border_color="#4338CA", command=on_upload)
     btn_upload.pack(pady=(15, 20))

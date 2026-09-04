@@ -62,52 +62,52 @@ class MugytKampanyaApp(ctk.CTk):
         self.lbl_kampanya = ctk.CTkLabel(self.sidebar_frame, text="KAMPANYA & REKLAM", font=ctk.CTkFont(size=11, weight="bold"), text_color="#94A3B8")
         self.lbl_kampanya.grid(row=start_row, column=0, padx=20, pady=(5, 0), sticky="w")
 
-        self.btn_restoran = ctk.CTkButton(self.sidebar_frame, text="Restoran Kampanyaları", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("Kampanyalar"))
+        self.btn_restoran = ctk.CTkButton(self.sidebar_frame, text="Restoran Kampanyaları", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("Kampanyalar"))
         self.btn_restoran.grid(row=start_row+1, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_top_categories = ctk.CTkButton(self.sidebar_frame, text="Ana Ekran Kategorileri", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="#10B981", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("top_categories"))
+        self.btn_top_categories = ctk.CTkButton(self.sidebar_frame, text="Ana Ekran Kategorileri", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="#10B981", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("top_categories"))
         self.btn_top_categories.grid(row=start_row+2, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_mugut = ctk.CTkButton(self.sidebar_frame, text="Mugt Kampanyası", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("MugutKampanyalar"))
+        self.btn_mugut = ctk.CTkButton(self.sidebar_frame, text="Mugt Kampanyası", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("MugutKampanyalar"))
         self.btn_mugut.grid(row=start_row+3, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_sponsor = ctk.CTkButton(self.sidebar_frame, text="Sponsorlu Restoranlar", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("SponsorluRestoranlar"))
+        self.btn_sponsor = ctk.CTkButton(self.sidebar_frame, text="Sponsorlu Restoranlar", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("SponsorluRestoranlar"))
         self.btn_sponsor.grid(row=start_row+4, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_splash = ctk.CTkButton(self.sidebar_frame, text="Açılış Animasyonu (Splash)", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("Reklamlar"))
+        self.btn_splash = ctk.CTkButton(self.sidebar_frame, text="Açılış Animasyonu", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("Reklamlar"))
         self.btn_splash.grid(row=start_row+5, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_app_banners = ctk.CTkButton(self.sidebar_frame, text="Mobil Üst Afiş Reklamları", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("AppBanners"))
+        self.btn_app_banners = ctk.CTkButton(self.sidebar_frame, text="Mobil Üst Afiş Reklamları", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("AppBanners"))
         self.btn_app_banners.grid(row=start_row+6, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_dashboard_banner = ctk.CTkButton(self.sidebar_frame, text="Fırsatlar (Dashboard) Afişi", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="#FACC15", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("DashboardBanners"))
+        self.btn_dashboard_banner = ctk.CTkButton(self.sidebar_frame, text="Fırsatlar Afişi", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="#FACC15", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("DashboardBanners"))
         self.btn_dashboard_banner.grid(row=start_row+7, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_notifications = ctk.CTkButton(self.sidebar_frame, text="🔔 Bildirim Gönder (Push)", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="#FFB020", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("Notifications"))
+        self.btn_notifications = ctk.CTkButton(self.sidebar_frame, text="Bildirim Gönder", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="#FFB020", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("Notifications"))
         self.btn_notifications.grid(row=start_row+8, column=0, padx=20, pady=5, sticky="ew")
         
-        self.btn_texts = ctk.CTkButton(self.sidebar_frame, text="📝 Uygulama Yazıları", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("AppTexts"))
+        self.btn_texts = ctk.CTkButton(self.sidebar_frame, text="Uygulama Yazıları", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("AppTexts"))
         self.btn_texts.grid(row=start_row+9, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_wallet = ctk.CTkButton(self.sidebar_frame, text="💰 Biriken Kuponlarım", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="#10B981", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("WalletConfig"))
+        self.btn_wallet = ctk.CTkButton(self.sidebar_frame, text="Biriken Kuponlarım", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="#10B981", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("WalletConfig"))
         self.btn_wallet.grid(row=start_row+10, column=0, padx=20, pady=(5, 20), sticky="ew")
 
         self.lbl_sistem = ctk.CTkLabel(self.sidebar_frame, text="SİSTEM YÖNETİMİ", font=ctk.CTkFont(size=11, weight="bold"), text_color="#94A3B8")
         self.lbl_sistem.grid(row=start_row+11, column=0, padx=20, pady=(5, 0), sticky="w")
 
-        self.btn_siparis = ctk.CTkButton(self.sidebar_frame, text="Siparişler", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("Emirler"))
+        self.btn_siparis = ctk.CTkButton(self.sidebar_frame, text="Siparişler", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("Emirler"))
         self.btn_siparis.grid(row=start_row+12, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_restoranlar = ctk.CTkButton(self.sidebar_frame, text="Restoranlar", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("Dukkanlar"))
+        self.btn_restoranlar = ctk.CTkButton(self.sidebar_frame, text="Restoranlar", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("Dukkanlar"))
         self.btn_restoranlar.grid(row=start_row+13, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_kullanicilar = ctk.CTkButton(self.sidebar_frame, text="Kullanıcılar", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("users"))
+        self.btn_kullanicilar = ctk.CTkButton(self.sidebar_frame, text="Kullanıcılar", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("users"))
         self.btn_kullanicilar.grid(row=start_row+14, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_musterihiz = ctk.CTkButton(self.sidebar_frame, text="Müşteri Hizmetleri", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("SupportChats"))
+        self.btn_musterihiz = ctk.CTkButton(self.sidebar_frame, text="Müşteri Hizmetleri", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("SupportChats"))
         self.btn_musterihiz.grid(row=start_row+15, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_gecmis = ctk.CTkButton(self.sidebar_frame, text="Geçmiş Arşiv", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("ArchivedChats"))
+        self.btn_gecmis = ctk.CTkButton(self.sidebar_frame, text="Geçmiş Sohbetler", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", border_width=1, border_color="#7C3AED", anchor="w", command=lambda: self.select_menu("ArchivedChats"))
         self.btn_gecmis.grid(row=start_row+16, column=0, padx=20, pady=5, sticky="ew")
 
         self.sidebar_frame.grid_rowconfigure(start_row+17, weight=1)
@@ -215,26 +215,26 @@ class MugytKampanyaApp(ctk.CTk):
             self.page_title.configure(text="Sponsorlu Restoranlar")
         elif collection_name == "ArchivedChats":
             self.btn_gecmis.configure(fg_color="white", text_color="#5D3EBC")
-            self.page_title.configure(text="Geçmiş Sohbet Arşivi")
+            self.page_title.configure(text="Geçmiş Sohbetler")
         elif collection_name == "Reklamlar":
-            self.page_title.configure(text="Açılış Animasyonu (Splash)")
+            self.page_title.configure(text="Açılış Animasyonu")
             self.btn_splash.configure(fg_color="white", text_color="#5D3EBC")
         elif collection_name == "AppBanners":
             self.page_title.configure(text="Mobil Üst Afiş Reklamları")
             self.btn_app_banners.configure(fg_color="white", text_color="#5D3EBC")
         elif collection_name == "DashboardBanners":
-            self.page_title.configure(text="Fırsatlar (Dashboard) Afişi")
+            self.page_title.configure(text="Fırsatlar Afişi")
             self.btn_dashboard_banner.configure(fg_color="white", text_color="#5D3EBC")
         elif collection_name == "Notifications":
             self.btn_notifications.configure(fg_color="white", text_color="#5D3EBC")
-            self.page_title.configure(text="🔔 Bildirim Merkezi (Push)")
+            self.page_title.configure(text="Bildirim Merkezi")
             self.search_entry.place_forget()
             self.add_btn.place_forget()
             ui_notifications.render(self.content_scroll)
             return
         elif collection_name == "AppTexts":
             self.btn_texts.configure(fg_color="white", text_color="#5D3EBC")
-            self.page_title.configure(text="📝 Uygulama Yazıları")
+            self.page_title.configure(text="Uygulama Yazıları")
             self.search_entry.place_forget()
             self.add_btn.place_forget()
             ui_texts.render(self.content_scroll)

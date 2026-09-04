@@ -50,11 +50,11 @@ class MugytKampanyaApp(ctk.CTk):
             self.logo_img_label = ctk.CTkLabel(self.sidebar_frame, text="", image=logo_img)
             self.logo_img_label.grid(row=0, column=0, padx=20, pady=(30, 0))
             
-            self.logo_label = ctk.CTkLabel(self.sidebar_frame, text="MUGUT GELSIN", font=ctk.CTkFont(size=18, weight="bold"), text_color="white")
+            self.logo_label = ctk.CTkLabel(self.sidebar_frame, text="MUGT GELSİN", font=ctk.CTkFont(size=18, weight="bold"), text_color="white")
             self.logo_label.grid(row=1, column=0, padx=20, pady=(5, 30))
             start_row = 2
         except Exception as e:
-            self.logo_label = ctk.CTkLabel(self.sidebar_frame, text="MUGUT GELSIN", font=ctk.CTkFont(size=24, weight="bold"), text_color="white")
+            self.logo_label = ctk.CTkLabel(self.sidebar_frame, text="MUGT GELSİN", font=ctk.CTkFont(size=24, weight="bold"), text_color="white")
             self.logo_label.grid(row=0, column=0, padx=20, pady=(30, 30))
             start_row = 1
 
@@ -68,7 +68,7 @@ class MugytKampanyaApp(ctk.CTk):
         self.btn_top_categories = ctk.CTkButton(self.sidebar_frame, text="Ana Ekran Kategorileri", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="#10B981", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("top_categories"))
         self.btn_top_categories.grid(row=start_row+2, column=0, padx=20, pady=5, sticky="ew")
 
-        self.btn_mugut = ctk.CTkButton(self.sidebar_frame, text="Mugut Kampanyası", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("MugutKampanyalar"))
+        self.btn_mugut = ctk.CTkButton(self.sidebar_frame, text="Mugt Kampanyası", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("MugutKampanyalar"))
         self.btn_mugut.grid(row=start_row+3, column=0, padx=20, pady=5, sticky="ew")
 
         self.btn_sponsor = ctk.CTkButton(self.sidebar_frame, text="Sponsorlu Restoranlar", font=ctk.CTkFont(size=14, weight="bold"), corner_radius=8, height=40, fg_color="transparent", text_color="white", hover_color="#462E8E", anchor="w", command=lambda: self.select_menu("SponsorluRestoranlar"))
@@ -209,7 +209,7 @@ class MugytKampanyaApp(ctk.CTk):
             self.page_title.configure(text="Ana Ekran Kategorileri (Top 8)")
         elif collection_name == "MugutKampanyalar":
             self.btn_mugut.configure(fg_color="white", text_color="#5D3EBC")
-            self.page_title.configure(text="Mugut Kampanyası (Genel)")
+            self.page_title.configure(text="Mugt Kampanyası (Genel)")
         elif collection_name == "SponsorluRestoranlar":
             self.btn_sponsor.configure(fg_color="white", text_color="#5D3EBC")
             self.page_title.configure(text="Sponsorlu Restoranlar")

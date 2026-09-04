@@ -92,7 +92,7 @@ def open_campaign_modal(app):
     btn_upload_img.pack(side="right")
 
     ctk.CTkLabel(scroll_frame, text="Kampanya Kodu (Opsiyonel):", font=ctk.CTkFont(weight="bold")).pack(anchor="w", pady=(10, 0), padx=5)
-    entry_code = ctk.CTkEntry(scroll_frame, placeholder_text="Örn: MUGUT20")
+    entry_code = ctk.CTkEntry(scroll_frame, placeholder_text="Örn: MUGT20")
     entry_code.pack(fill="x", pady=5, padx=5)
 
     ctk.CTkLabel(scroll_frame, text="İndirim Tipi:", font=ctk.CTkFont(weight="bold")).pack(anchor="w", pady=(10, 0), padx=5)

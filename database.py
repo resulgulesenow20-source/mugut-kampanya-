@@ -237,7 +237,7 @@ def send_chat_message(uid, text):
         msg_data = {
             'text': text,
             'senderId': 'admin',
-            'senderName': 'Mugut Destek',
+            'senderName': 'Mugt Destek',
             'isAdmin': True,
             'timestamp': timestamp
         }

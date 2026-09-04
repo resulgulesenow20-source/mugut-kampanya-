@@ -50,11 +50,11 @@ class MugytKampanyaApp(ctk.CTk):
             self.logo_img_label = ctk.CTkLabel(self.sidebar_frame, text="", image=logo_img)
             self.logo_img_label.grid(row=0, column=0, padx=20, pady=(30, 0))
             
-            self.logo_label = ctk.CTkLabel(self.sidebar_frame, text="MUGYT ADMIN", font=ctk.CTkFont(size=18, weight="bold"), text_color="white")
+            self.logo_label = ctk.CTkLabel(self.sidebar_frame, text="MUGUT GELSIN", font=ctk.CTkFont(size=18, weight="bold"), text_color="white")
             self.logo_label.grid(row=1, column=0, padx=20, pady=(5, 30))
             start_row = 2
         except Exception as e:
-            self.logo_label = ctk.CTkLabel(self.sidebar_frame, text="MUGYT ADMIN", font=ctk.CTkFont(size=24, weight="bold"), text_color="white")
+            self.logo_label = ctk.CTkLabel(self.sidebar_frame, text="MUGUT GELSIN", font=ctk.CTkFont(size=24, weight="bold"), text_color="white")
             self.logo_label.grid(row=0, column=0, padx=20, pady=(30, 30))
             start_row = 1
 

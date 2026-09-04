@@ -60,13 +60,18 @@ def render_list(app):
         desc.grid(row=1, column=0, padx=24, pady=(0, 18), sticky="w")
         
         durum_color = "#10B981" if durum.lower() in ["aktif", "true", "delivered", "completed", "teslim edildi"] else "#EF4444"
+        display_durum = durum
+        if durum.lower() == "true":
+            display_durum = "+"
+        elif durum.lower() == "false":
+            display_durum = "-"
         
         if app.current_collection == "AppBanners":
             if durum.lower() in ["true", "aktif"]:
-                durum = "✅ Yayında"
+                display_durum = "✅ Yayında"
                 durum_color = "#10B981"
         
-        durum_badge = ctk.CTkLabel(card, text=durum.upper(), font=ctk.CTkFont(size=11, weight="bold"), fg_color=durum_color, text_color="white", corner_radius=12, padx=12, pady=4, cursor="hand2")
+        durum_badge = ctk.CTkLabel(card, text=display_durum.upper(), font=ctk.CTkFont(size=18, weight="bold"), fg_color=durum_color, text_color="white", corner_radius=8, width=36, height=36, cursor="hand2")
         durum_badge.grid(row=0, column=1, rowspan=2, padx=(20, 10) if (app.current_collection == "AppBanners" or app.current_collection == "users") else 20, pady=15, sticky="e")
 
         if app.current_collection == "AppBanners":
@@ -83,7 +88,7 @@ def render_list(app):
                             messagebox.showerror("Hata", f"Silinirken hata oluştu: {e}")
                 return cmd
                 
-            btn_del = ctk.CTkButton(card, text="× Sil", width=70, height=28, corner_radius=14, font=ctk.CTkFont(size=12, weight="bold"), fg_color="#FEE2E2", hover_color="#FECACA", text_color="#EF4444", command=make_delete_cmd(item.get("id")))
+            btn_del = ctk.CTkButton(card, text="🗑️", width=36, height=36, corner_radius=8, font=ctk.CTkFont(size=16), fg_color="#FEE2E2", hover_color="#FECACA", text_color="#EF4444", border_width=1, border_color="#FCA5A5", command=make_delete_cmd(item.get("id")))
             btn_del.grid(row=0, column=2, rowspan=2, padx=(0, 20), pady=15, sticky="e")
             
         elif app.current_collection == "top_categories":
@@ -100,7 +105,7 @@ def render_list(app):
                             messagebox.showerror("Hata", f"Silinirken hata oluştu: {e}")
                 return cmd
                 
-            btn_del_cat = ctk.CTkButton(card, text="× Sil", width=70, height=28, corner_radius=14, font=ctk.CTkFont(size=12, weight="bold"), fg_color="#FEE2E2", hover_color="#FECACA", text_color="#EF4444", command=make_del_cat_cmd(item.get("id")))
+            btn_del_cat = ctk.CTkButton(card, text="🗑️", width=36, height=36, corner_radius=8, font=ctk.CTkFont(size=16), fg_color="#FEE2E2", hover_color="#FECACA", text_color="#EF4444", border_width=1, border_color="#FCA5A5", command=make_del_cat_cmd(item.get("id")))
             btn_del_cat.grid(row=0, column=2, rowspan=2, padx=(0, 20), pady=15, sticky="e")
             
         if app.current_collection == "users":
@@ -123,7 +128,7 @@ def render_list(app):
                         messagebox.showerror("Hata", f"Sohbet başlatılamadı: {e}")
                 return cmd
                 
-            btn_chat = ctk.CTkButton(card, text="Sohbet Başlat", width=110, height=28, corner_radius=14, font=ctk.CTkFont(size=12, weight="bold"), fg_color="#DBEAFE", hover_color="#BFDBFE", text_color="#2563EB", command=make_chat_cmd(item.get("id", item.get("userId")), item))
+            btn_chat = ctk.CTkButton(card, text="💬 Sohbet", width=100, height=36, corner_radius=8, font=ctk.CTkFont(size=13, weight="bold"), fg_color="#DBEAFE", hover_color="#BFDBFE", text_color="#2563EB", border_width=1, border_color="#93C5FD", command=make_chat_cmd(item.get("id", item.get("userId")), item))
             btn_chat.grid(row=0, column=2, rowspan=2, padx=(0, 20), pady=15, sticky="e")
 
         def create_modal_cmd(item_ref, badge_ref):

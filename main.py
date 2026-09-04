@@ -133,7 +133,7 @@ class MugytKampanyaApp(ctk.CTk):
         self.search_entry = ctk.CTkEntry(self.header_frame, textvariable=self.search_var, placeholder_text="Arama yap...", width=300, height=36, corner_radius=8, border_color="#CBD5E1")
         self.search_entry.place(relx=0.5, rely=0.5, anchor="center")
 
-        self.add_btn = ctk.CTkButton(self.header_frame, text="+ Yeni Ekle", font=ctk.CTkFont(size=13, weight="bold"), fg_color="#5D3EBC", hover_color="#462E8E", text_color="white", corner_radius=18, height=36, command=self.open_add_modal)
+        self.add_btn = ctk.CTkButton(self.header_frame, text="✨ Yeni Ekle", font=ctk.CTkFont(size=14, weight="bold"), fg_color="#6366F1", hover_color="#4F46E5", text_color="white", corner_radius=8, height=40, border_width=2, border_color="#4338CA", command=self.open_add_modal)
         self.add_btn.place(relx=0.97, rely=0.5, anchor="e")
 
         self.content_scroll = ctk.CTkScrollableFrame(self.main_frame, fg_color="transparent")
@@ -206,7 +206,7 @@ class MugytKampanyaApp(ctk.CTk):
             self.page_title.configure(text="Restoran Kampanyaları")
         elif collection_name == "top_categories":
             self.btn_top_categories.configure(fg_color="white", text_color="#5D3EBC")
-            self.page_title.configure(text="Ana Ekran Kategorileri (Top 8)")
+            self.page_title.configure(text="Ana Ekran Kategorileri")
         elif collection_name == "MugutKampanyalar":
             self.btn_mugut.configure(fg_color="white", text_color="#5D3EBC")
             self.page_title.configure(text="Mugt Kampanyası (Genel)")

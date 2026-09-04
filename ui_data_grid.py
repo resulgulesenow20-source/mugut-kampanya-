@@ -204,11 +204,11 @@ def _render_splash_upload_section(app):
             except Exception as e:
                 messagebox.showerror("Hata", f"Yükleme sırasında hata oluştu:\n{e}")
             finally:
-                btn_upload.configure(text="✨ Medya Yükle", state="normal")
+                btn_upload.configure(text="+ Medya Yükle", state="normal")
                 
         threading.Thread(target=process_upload, daemon=True).start()
         
-    btn_upload = ctk.CTkButton(frame, text="✨ Medya Yükle", font=ctk.CTkFont(size=15, weight="bold"), fg_color="#6366F1", hover_color="#4F46E5", text_color="white", corner_radius=12, height=44, border_width=2, border_color="#4338CA", command=on_upload)
+    btn_upload = ctk.CTkButton(frame, text="+ Medya Yükle", font=ctk.CTkFont(size=15, weight="bold"), fg_color="#6366F1", hover_color="#4F46E5", text_color="white", corner_radius=12, height=44, border_width=2, border_color="#4338CA", command=on_upload)
     btn_upload.pack(pady=(0, 15))
 
 def _render_app_banners_upload_section(app):
@@ -294,11 +294,11 @@ def _render_app_banners_upload_section(app):
             except Exception as e:
                 messagebox.showerror("Hata", f"Yükleme sırasında hata oluştu:\n{e}")
                 try:
-                    btn_upload.configure(text="✨ Afiş Yükle", state="normal")
+                    btn_upload.configure(text="+ Afiş Yükle", state="normal")
                 except:
                     pass
                 
         threading.Thread(target=process_upload, daemon=True).start()
         
-    btn_upload = ctk.CTkButton(frame, text="✨ Afiş Yükle", font=ctk.CTkFont(size=15, weight="bold"), fg_color="#6366F1", hover_color="#4F46E5", text_color="white", corner_radius=12, height=44, border_width=2, border_color="#4338CA", command=on_upload)
+    btn_upload = ctk.CTkButton(frame, text="+ Afiş Yükle", font=ctk.CTkFont(size=15, weight="bold"), fg_color="#6366F1", hover_color="#4F46E5", text_color="white", corner_radius=12, height=44, border_width=2, border_color="#4338CA", command=on_upload)
     btn_upload.pack(pady=(15, 20))

@@ -17,6 +17,14 @@ def render_list(app):
         return
 
     search_query = app.search_var.get().lower()
+    
+    if not hasattr(app, "trash_icon"):
+        try:
+            from PIL import Image
+            app.trash_icon = ctk.CTkImage(Image.open("trash.png"), size=(22, 22))
+        except:
+            app.trash_icon = None
+
 
     filtered_data = []
     for item in app.current_data:
@@ -71,7 +79,7 @@ def render_list(app):
                 display_durum = "✅ Yayında"
                 durum_color = "#10B981"
         
-        durum_badge = ctk.CTkLabel(card, text=display_durum.upper(), font=ctk.CTkFont(size=18, weight="bold"), fg_color=durum_color, text_color="white", corner_radius=8, width=36, height=36, cursor="hand2")
+        durum_badge = ctk.CTkButton(card, text=display_durum.upper(), font=ctk.CTkFont(size=22, weight="bold"), fg_color=durum_color, text_color="white", corner_radius=8, width=44, height=44, hover=False)
         durum_badge.grid(row=0, column=1, rowspan=2, padx=(20, 10) if (app.current_collection == "AppBanners" or app.current_collection == "users") else 20, pady=15, sticky="e")
 
         if app.current_collection == "AppBanners":
@@ -88,7 +96,7 @@ def render_list(app):
                             messagebox.showerror("Hata", f"Silinirken hata oluştu: {e}")
                 return cmd
                 
-            btn_del = ctk.CTkButton(card, text="🗑️", width=36, height=36, corner_radius=8, font=ctk.CTkFont(size=16), fg_color="#FEE2E2", hover_color="#FECACA", text_color="#EF4444", border_width=1, border_color="#FCA5A5", command=make_delete_cmd(item.get("id")))
+            btn_del = ctk.CTkButton(card, text="" if getattr(app, "trash_icon", None) else "🗑️", image=getattr(app, "trash_icon", None), width=44, height=44, corner_radius=8, font=ctk.CTkFont(size=18), fg_color="#FEE2E2", hover_color="#FECACA", text_color="#EF4444", command=make_delete_cmd(item.get("id")))
             btn_del.grid(row=0, column=2, rowspan=2, padx=(0, 20), pady=15, sticky="e")
             
         elif app.current_collection == "top_categories":
@@ -105,7 +113,7 @@ def render_list(app):
                             messagebox.showerror("Hata", f"Silinirken hata oluştu: {e}")
                 return cmd
                 
-            btn_del_cat = ctk.CTkButton(card, text="🗑️", width=36, height=36, corner_radius=8, font=ctk.CTkFont(size=16), fg_color="#FEE2E2", hover_color="#FECACA", text_color="#EF4444", border_width=1, border_color="#FCA5A5", command=make_del_cat_cmd(item.get("id")))
+            btn_del_cat = ctk.CTkButton(card, text="" if getattr(app, "trash_icon", None) else "🗑️", image=getattr(app, "trash_icon", None), width=44, height=44, corner_radius=8, font=ctk.CTkFont(size=18), fg_color="#FEE2E2", hover_color="#FECACA", text_color="#EF4444", command=make_del_cat_cmd(item.get("id")))
             btn_del_cat.grid(row=0, column=2, rowspan=2, padx=(0, 20), pady=15, sticky="e")
             
         if app.current_collection == "users":

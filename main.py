@@ -133,7 +133,7 @@ class MugytKampanyaApp(ctk.CTk):
         self.search_entry = ctk.CTkEntry(self.header_frame, textvariable=self.search_var, placeholder_text="Arama yap...", width=300, height=36, corner_radius=8, border_color="#CBD5E1")
         self.search_entry.place(relx=0.5, rely=0.5, anchor="center")
 
-        self.add_btn = ctk.CTkButton(self.header_frame, text="+ Yeni Ekle", font=ctk.CTkFont(size=14, weight="bold"), fg_color="#5D3EBC", hover_color="#462E8E", text_color="white", corner_radius=8, command=self.open_add_modal)
+        self.add_btn = ctk.CTkButton(self.header_frame, text="+ Yeni Ekle", font=ctk.CTkFont(size=13, weight="bold"), fg_color="#5D3EBC", hover_color="#462E8E", text_color="white", corner_radius=18, height=36, command=self.open_add_modal)
         self.add_btn.place(relx=0.97, rely=0.5, anchor="e")
 
         self.content_scroll = ctk.CTkScrollableFrame(self.main_frame, fg_color="transparent")
